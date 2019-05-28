@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InventoryCardReportSubreport1" pageWidth="600" pageHeight="700" whenNoDataType="AllSectionsNoDetail" columnWidth="600" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5a95166f-e72a-4c5c-82e6-dd2624e6f442">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="247"/>
+	<parameter name="CARD_ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\УЧЁБА\\ДИПЛОМНАЯ РАБОТА\\Reports\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     transmission_info.`production_date` AS transmission_info_production_date,
+     transmission_info.`repair_date` AS transmission_info_repair_date,
+     transmission_info.`document_name` AS transmission_info_document_name,
+     transmission_info.`document_number` AS transmission_info_document_number,
+     transmission_info.`document_date` AS transmission_info_document_date,
+     transmission_info.`operation_period` AS transmission_info_operation_period,
+     transmission_info.`depreciation_amount` AS transmission_info_depreciation_amount,
+     transmission_info.`residual_cost` AS transmission_info_residual_cost,
+     inventory_card.`initial_cost` AS inventory_card_initial_cost,
+     inventory_card.`useful_life` AS inventory_card_useful_life
+FROM
+     `inventory_card` inventory_card LEFT JOIN `transmission_info` transmission_info ON inventory_card.`id_inventory_card` = transmission_info.`id_transmission_info`
+WHERE
+     inventory_card.`id_inventory_card` = $P{CARD_ID}]]>
+	</queryString>
+	<field name="transmission_info_production_date" class="java.sql.Date"/>
+	<field name="transmission_info_repair_date" class="java.sql.Date"/>
+	<field name="transmission_info_document_name" class="java.lang.String"/>
+	<field name="transmission_info_document_number" class="java.lang.String"/>
+	<field name="transmission_info_document_date" class="java.sql.Date"/>
+	<field name="transmission_info_operation_period" class="java.lang.Integer"/>
+	<field name="transmission_info_depreciation_amount" class="java.math.BigDecimal"/>
+	<field name="transmission_info_residual_cost" class="java.math.BigDecimal"/>
+	<field name="inventory_card_initial_cost" class="java.math.BigDecimal"/>
+	<field name="inventory_card_useful_life" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="750" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="40" width="329" height="51" uuid="598180ff-ecef-4564-8ec8-4cca71bf27d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Раздел 1. Сведенья об объекте основных фондов на дату передачи]]></text>
+			</staticText>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="127" width="200" height="35" uuid="8eb60b5f-89aa-4d24-a486-af929c1e711d"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Дата выпуска]]></text>
+				</staticText>
+				<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="127" width="300" height="35" uuid="08f4f991-40bd-4ef2-b736-1fa5d34f472f"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_production_date}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="609" width="200" height="35" uuid="80ca3b2f-7015-423d-8e01-97a313975dee"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Срок полезного использования]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="609" width="300" height="35" uuid="8cfeae93-1c22-41cd-85a6-995d9d97d068"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_useful_life}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="574" width="200" height="35" uuid="b30abd53-14ca-4634-a39b-60a71dde7fab"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Первоначальная стоимость на дату принятия]]></text>
+				</staticText>
+				<textField pattern="###0.00 ¤" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="574" width="300" height="35" uuid="6d49601e-b52e-458f-91c1-82eba50bddd5"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_initial_cost}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup/>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="372" width="200" height="35" uuid="dfa501e9-82a2-49f2-814b-272c25afbd39"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Остаточная стоимость]]></text>
+				</staticText>
+				<textField pattern="###0.00 ¤" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="372" width="300" height="35" uuid="45b7eb55-c652-4196-86bc-cdc34d0a722d"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_residual_cost}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="337" width="200" height="35" uuid="8053d6a3-0ed6-4322-8c4f-1ef1fa3c6727"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Сумма начисленной амортизации]]></text>
+				</staticText>
+				<textField pattern="###0.00 ¤" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="337" width="300" height="35" uuid="ea8021fc-5b7e-40d6-8bd7-3dcb1ba550cc"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_depreciation_amount}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="302" width="200" height="35" uuid="50494df1-9f87-43d8-9bc1-167f754d080a"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Фактический срок эксплуатации]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="302" width="300" height="35" uuid="7bdd9659-c42e-4e0f-9d57-c5d37474eeb6"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_operation_period}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="232" width="200" height="35" uuid="ccd91dcd-2a1b-473a-b726-1b2642ee6a75"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Номер документа]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="232" width="300" height="35" uuid="44ad3aee-0776-4600-97e2-dc36fda74676"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_document_number}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="197" width="200" height="35" uuid="5835b7ff-d639-428f-bb66-cd066ca4c978"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Наименование документа о вводе в эксплуатацию]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="197" width="300" height="35" uuid="3a275401-0e1a-432b-93e4-73fa38594375"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_document_name}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="267" width="200" height="35" uuid="9145fab8-a225-4e36-bd28-03e2c053fbba"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Дата документа]]></text>
+				</staticText>
+				<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="267" width="300" height="35" uuid="0a6b06ef-ef83-4252-9e04-f08b29e2a8b0"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_document_date}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="50" y="162" width="200" height="35" uuid="60b01cff-e5e9-4dce-b31a-2a76b6894664"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Дата последнего ремонта, реконструкции, модернизации]]></text>
+				</staticText>
+				<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="250" y="162" width="300" height="35" uuid="6d25d02d-e036-435f-aaef-05300348b987"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transmission_info_repair_date}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<staticText>
+				<reportElement x="150" y="471" width="329" height="61" uuid="b4a3d57a-ac6b-45f4-86fe-abbd2b8a19ce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Раздел 2. Сведенья об объекте основных фондов на дату принятия к учету]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

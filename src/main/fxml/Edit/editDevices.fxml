@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="238.0" prefWidth="354.0" stylesheets="@../../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.Edit.EditDevicesController">
+   <children>
+      <Label layoutX="30.0" layoutY="21.0" text="Карточка" />
+      <Label layoutX="30.0" layoutY="59.0" prefHeight="49.0" prefWidth="89.0" text="Наименование устройства" wrapText="true" />
+      <Label layoutX="30.0" layoutY="130.0" text="Количество" />
+      <ComboBox fx:id="cbCard" layoutX="130.0" layoutY="17.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="tfName" layoutX="130.0" layoutY="71.0" prefWidth="200.0" />
+      <TextField fx:id="tfCount" layoutX="130.0" layoutY="126.0" prefWidth="200.0" />
+      <Button fx:id="btnSave" layoutX="46.0" layoutY="180.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="40.0" prefWidth="120.0" text="Сохранить" />
+      <Button layoutX="197.0" layoutY="180.0" mnemonicParsing="false" onAction="#btnCloseAction" prefHeight="40.0" prefWidth="120.0" text="Закрыть" />
+   </children>
+</AnchorPane>

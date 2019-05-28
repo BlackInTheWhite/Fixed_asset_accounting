@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="416.0" prefWidth="534.0" stylesheets="@../../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.Edit.EditDepreciationController">
+   <children>
+      <Label layoutX="25.0" layoutY="19.0" text="Карточка*" />
+      <Label layoutX="25.0" layoutY="72.0" text="Год*" />
+      <Label layoutX="25.0" layoutY="113.0" text="Январь*" />
+      <Label layoutX="25.0" layoutY="154.0" text="Февраль*" />
+      <Label layoutX="25.0" layoutY="194.0" text="Март*" />
+      <Label layoutX="25.0" layoutY="234.0" text="Апрель*" />
+      <Label layoutX="25.0" layoutY="274.0" text="Май*" />
+      <Label layoutX="25.0" layoutY="314.0" text="Июнь*" />
+      <Label layoutX="280.0" layoutY="113.0" text="Июль*" />
+      <Label layoutX="280.0" layoutY="154.0" text="Август*" />
+      <Label layoutX="280.0" layoutY="194.0" text="Сентябрь*" />
+      <Label layoutX="280.0" layoutY="234.0" text="Октябрь*" />
+      <Label layoutX="280.0" layoutY="274.0" text="Ноябрь*" />
+      <Label layoutX="280.0" layoutY="314.0" text="Декабрь*" />
+      <Button fx:id="btnSave" layoutX="100.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="40.0" prefWidth="150.0" text="Сохранить" />
+      <Button layoutX="304.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnCloseAction" prefHeight="40.0" prefWidth="150.0" text="Закрыть" />
+      <TextField fx:id="tfMonth1" layoutX="100.0" layoutY="110.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth2" layoutX="100.0" layoutY="150.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth3" layoutX="100.0" layoutY="190.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth4" layoutX="100.0" layoutY="230.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth5" layoutX="100.0" layoutY="270.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth6" layoutX="100.0" layoutY="310.0" prefWidth="150.0" />
+      <TextField fx:id="tfYear" editable="false" layoutX="100.0" layoutY="68.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth12" layoutX="350.0" layoutY="310.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth11" layoutX="350.0" layoutY="270.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth10" layoutX="350.0" layoutY="230.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth9" layoutX="350.0" layoutY="190.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth8" layoutX="350.0" layoutY="150.0" prefWidth="150.0" />
+      <TextField fx:id="tfMonth7" layoutX="350.0" layoutY="109.0" prefWidth="150.0" />
+      <TextField fx:id="tfCard" editable="false" layoutX="100.0" layoutY="15.0" prefHeight="25.0" prefWidth="225.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InventoryCardReportSubreport8" pageWidth="600" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="600" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e68b6094-8411-43d2-8bc1-63180877de00">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="102"/>
+	<parameter name="CARD_ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     inventory_card.`participants` AS inventory_card_participants,
+     inventory_card.`ownership_share` AS inventory_card_ownership_share,
+     inventory_card.`name_of_structural_elements_etc` AS inventory_card_name_of_structural_elements_etc,
+     inventory_card.`characteristics_main_object` AS inventory_card_characteristics_main_object,
+     inventory_card.`characteristics_of_the_devices_etc` AS inventory_card_characteristics_of_the_devices_etc,
+     inventory_card.`notice` AS inventory_card_notice,
+     crp.`surname` AS crp_surname,
+     crp.`name` AS crp_name,
+     crp.`patronymic` AS crp_patronymic,
+     crp.`position` AS crp_position,
+     crp.`personnel_number` AS crp_personnel_number
+FROM
+     `crp` crp INNER JOIN `inventory_card` inventory_card ON crp.`id_crp` = inventory_card.`person_responsible_for_card`
+WHERE
+     inventory_card.`id_inventory_card` = $P{CARD_ID}]]>
+	</queryString>
+	<field name="inventory_card_participants" class="java.lang.String"/>
+	<field name="inventory_card_ownership_share" class="java.lang.Integer"/>
+	<field name="inventory_card_name_of_structural_elements_etc" class="java.lang.String"/>
+	<field name="inventory_card_characteristics_main_object" class="java.lang.String"/>
+	<field name="inventory_card_characteristics_of_the_devices_etc" class="java.lang.String"/>
+	<field name="inventory_card_notice" class="java.lang.String"/>
+	<field name="crp_surname" class="java.lang.String"/>
+	<field name="crp_name" class="java.lang.String"/>
+	<field name="crp_patronymic" class="java.lang.String"/>
+	<field name="crp_position" class="java.lang.String"/>
+	<field name="crp_personnel_number" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="605" splitType="Stretch">
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="30" y="122" width="200" height="50" uuid="00cebf75-5f45-4899-8a66-1223dc9a3243"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Доля в праве общей собственности]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="230" y="122" width="340" height="50" uuid="090c60e3-f364-486a-a5c4-e8ea03dcddb9"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_ownership_share}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup/>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="30" y="529" width="200" height="50" uuid="5b4920b2-9d3d-4044-bc9e-4c10d8ab07fd"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Лицо, ответственное за ведение карточки]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="230" y="529" width="350" height="50" uuid="cc5de0cb-7d41-4cc8-860a-0a06bf8f96c2"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{crp_surname}+" "+$F{crp_name}+" "+$F{crp_patronymic} +", "+
+$F{crp_position}+" ("+$F{crp_personnel_number}+")"]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="30" y="322" width="200" height="50" uuid="647bc782-20a0-49ea-ab0b-971e6687af52"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Примечание]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="230" y="322" width="340" height="50" uuid="b6e5ef38-0ba2-4bf8-ad49-e8b608cb66f5"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_notice}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="30" y="272" width="200" height="50" uuid="2331c1af-92b7-4d5e-b208-569817edcae5"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Характеристика приспособлений, принадлежностей и др.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="230" y="272" width="340" height="50" uuid="90d51ab1-634d-44f7-8b05-b5d87bbc587f"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_characteristics_of_the_devices_etc}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="30" y="222" width="200" height="50" uuid="da88d9bf-d247-4723-b92a-081061313bf5"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Характеристика основного объекта]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="230" y="222" width="340" height="50" uuid="229f95dc-a32e-45a5-81b2-ffc546c787dd"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_characteristics_main_object}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="30" y="172" width="200" height="50" uuid="7241a39a-4181-4262-809e-7f7c3ee1085a"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Наименование конструктивных элементов и других признаков]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="230" y="172" width="340" height="50" uuid="603aa670-cbfe-40ed-a2e1-fc7016c3e664"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_name_of_structural_elements_etc}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="30" y="72" width="200" height="50" uuid="97274b4e-8f71-4d9d-b983-4bf0b2a4cca7"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<text><![CDATA[Участники долевой собственности]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="230" y="72" width="340" height="50" uuid="d5294db0-9e66-4456-9a68-264dd3d23129"/>
+					<box>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+						<topPen lineWidth="0.5" lineStyle="Solid"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="14" pdfFontName="times.ttf" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="1" spacingAfter="1"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventory_card_participants}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+		</band>
+	</title>
+</jasperReport>

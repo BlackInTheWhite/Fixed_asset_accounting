@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" stylesheets="@../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.ReceptionObjectController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="561.0" prefWidth="963.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="300.0">
+        <tabs>
+          <Tab text="Основная информация">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="978.0">
+                     <children>
+                        <Label layoutX="15.0" layoutY="15.0" text="Номер карточки*" />
+                        <TextField fx:id="tfCardNumber" layoutX="195.0" layoutY="11.0" prefWidth="225.0" />
+                        <TextField fx:id="tfOrganizationName" layoutX="195.0" layoutY="55.0" prefHeight="25.0" prefWidth="225.0" />
+                        <Label layoutX="15.0" layoutY="59.0" text="Наименование организации*" />
+                        <Label layoutX="15.0" layoutY="100.0" text="Наименование подразделения*" />
+                        <ComboBox fx:id="cbDepartment" layoutX="195.0" layoutY="96.0" prefWidth="225.0" />
+                        <Label layoutX="15.0" layoutY="138.0" text="Дата составления карточки*" />
+                        <DatePicker fx:id="dpCardDate" layoutX="195.0" layoutY="134.0" prefWidth="225.0" />
+                        <Label layoutX="15.0" layoutY="178.0" text="Наименование объекта*" />
+                        <Label layoutX="15.0" layoutY="217.0" text="Форма по ОКУД" />
+                        <Label layoutX="15.0" layoutY="256.0" prefHeight="17.0" prefWidth="161.0" text="Форма по ОКПО" />
+                        <Label layoutX="15.0" layoutY="293.0" prefHeight="17.0" prefWidth="161.0" text="Форма по ОКОФ" />
+                        <TextField fx:id="tfObjectName" layoutX="195.0" layoutY="174.0" prefWidth="225.0" />
+                        <TextField fx:id="tfOKUD" layoutX="195.0" layoutY="213.0" prefWidth="225.0" />
+                        <TextField fx:id="tfOKPO" layoutX="195.0" layoutY="252.0" prefWidth="225.0" />
+                        <TextField fx:id="tfOKOF" layoutX="195.0" layoutY="290.0" prefWidth="225.0" />
+                        <ComboBox fx:id="cbDepreciationGroup" layoutX="195.0" layoutY="331.0" prefWidth="225.0" />
+                        <Label layoutX="15.0" layoutY="335.0" text="Амортизационная группа*" />
+                        <TextField fx:id="tfPassportNumber" layoutX="195.0" layoutY="374.0" prefWidth="225.0" />
+                        <Label layoutX="15.0" layoutY="378.0" text="Номер паспорта*" />
+                        <TextField fx:id="tfSerialNumber" layoutX="195.0" layoutY="416.0" prefWidth="225.0" />
+                        <Label layoutX="15.0" layoutY="420.0" text="Заводской номер*" />
+                        <TextField fx:id="tfInventoryNumber" layoutX="196.0" layoutY="459.0" prefWidth="225.0" />
+                        <Label layoutX="15.0" layoutY="463.0" text="Инвентарный номер*" />
+                        <DatePicker fx:id="dpDeliveryDate" layoutX="709.0" layoutY="51.0" prefWidth="225.0" />
+                        <Label layoutX="458.0" layoutY="55.0" text="Дата поставки на бухгалтерский учёт*" />
+                        <TextField fx:id="tfAccountNumber" layoutX="710.0" layoutY="90.0" prefWidth="225.0" />
+                        <Label layoutX="459.0" layoutY="94.0" text="Номер счета*" />
+                        <TextField fx:id="tfLocation" layoutX="710.0" layoutY="128.0" prefWidth="225.0" />
+                        <Label layoutX="459.0" layoutY="132.0" text="Место нахождения объекта*" />
+                        <TextField fx:id="tfDepartmentNumber" layoutX="710.0" layoutY="168.0" prefWidth="225.0" />
+                        <Label layoutX="459.0" layoutY="172.0" text="Номер подразделения" />
+                        <Label layoutX="459.0" layoutY="211.0" text="Организация изготовитель*" />
+                        <TextField fx:id="tfManufacturer" layoutX="710.0" layoutY="207.0" prefWidth="225.0" />
+                        <TextField fx:id="tfInitialCost" layoutX="710.0" layoutY="246.0" prefWidth="225.0" />
+                        <Label layoutX="458.0" layoutY="238.0" prefHeight="41.0" prefWidth="207.0" text="Первоначальная стоимость на дату принятия к бухгалтерскому учету*" wrapText="true" />
+                        <TextField fx:id="tfUsefulLife" layoutX="710.0" layoutY="283.0" prefWidth="225.0" />
+                        <Label layoutX="459.0" layoutY="287.0" text="Срок полезного использования*" />
+                        <ComboBox fx:id="cbCRP" layoutX="709.0" layoutY="326.0" prefWidth="225.0" />
+                        <Label layoutX="458.0" layoutY="324.0" prefHeight="28.0" prefWidth="243.0" text="Лицо, ответственное за ведение карточки*" />
+                        <Label layoutX="458.0" layoutY="367.0" prefHeight="28.0" prefWidth="252.0" text="Материально-ответственное лицо*" />
+                        <ComboBox fx:id="cbMRP" layoutX="709.0" layoutY="369.0" prefWidth="225.0" />
+                        <TextField fx:id="tfParticipants" layoutX="710.0" layoutY="410.0" prefWidth="225.0" />
+                        <Label layoutX="459.0" layoutY="414.0" text="Участники долевой собственности" />
+                        <TextField fx:id="tfOwnershipShare" layoutX="710.0" layoutY="453.0" prefWidth="225.0" />
+                        <Label layoutX="458.0" layoutY="457.0" text="Доля в праве общей собственности" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Дополнительная информация">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="37.0" layoutY="24.0" text="Наименование конструктивных элементов и других признаков" />
+                        <TextField fx:id="tfStructuralElements" layoutX="417.0" layoutY="20.0" prefWidth="530.0" />
+                        <TextField fx:id="tfMainObjectsCharacteristics" layoutX="417.0" layoutY="64.0" prefWidth="530.0" />
+                        <Label layoutX="37.0" layoutY="68.0" text="Характеристики основного объекта" />
+                        <TextField fx:id="tfDevicesCharacteristics" layoutX="417.0" layoutY="105.0" prefWidth="530.0" />
+                        <Label layoutX="37.0" layoutY="109.0" text="Характеристики приспособлений, принадлежностей и др." />
+                        <TextField fx:id="tfNotice" layoutX="417.0" layoutY="143.0" prefHeight="25.0" prefWidth="527.0" />
+                        <Label layoutX="37.0" layoutY="147.0" text="Примечание" />
+                        <TableView fx:id="twDevices" editable="true" layoutX="58.0" layoutY="228.0" prefHeight="136.0" prefWidth="248.0">
+                          <columns>
+                            <TableColumn fx:id="tcDeviceName" prefWidth="140.0" text="Наименование" />
+                            <TableColumn fx:id="tcDeviceCount" prefWidth="106.0" text="Количество" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="twNobleMetals" layoutX="417.0" layoutY="228.0" prefHeight="137.0" prefWidth="530.0">
+                           <columns>
+                              <TableColumn fx:id="tcMetalName" prefWidth="126.0" text="Наименование" />
+                              <TableColumn fx:id="tcMetalNumber" prefWidth="95.0" text="Номер" />
+                              <TableColumn fx:id="tcMetalUnit" prefWidth="141.0" text="Единица измерения" />
+                              <TableColumn fx:id="tcMetalCount" prefWidth="90.0" text="Количество" />
+                              <TableColumn fx:id="tcMetalMass" prefWidth="78.0" text="Масса" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="81.0" layoutY="202.0" text="Приспособления и принадлежности" />
+                        <Label layoutX="582.0" layoutY="202.0" text="Содержание драгоценных металлов" />
+                        <TextField fx:id="tfDeviceName" layoutX="151.0" layoutY="383.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="tfDeviceCount" layoutX="150.0" layoutY="420.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Button layoutX="69.0" layoutY="463.0" mnemonicParsing="false" onAction="#btnDeviceAddAction" prefWidth="100.0" text="Добавить" />
+                        <Button layoutX="191.0" layoutY="463.0" mnemonicParsing="false" onAction="#btnDeviceDelAction" prefHeight="25.0" prefWidth="100.0" text="Удалить" />
+                        <Button layoutX="844.0" layoutY="464.0" mnemonicParsing="false" onAction="#btnMetalDelAction" prefWidth="100.0" text="Удалить" />
+                        <Button layoutX="714.0" layoutY="464.0" mnemonicParsing="false" onAction="#btnMetalAddAction" prefWidth="100.0" text="Добавить" />
+                        <TextField fx:id="tfMetalNumber" layoutX="529.0" layoutY="419.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="tfMetalName" layoutX="529.0" layoutY="383.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="tfMetalCount" layoutX="529.0" layoutY="454.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="tfMetalUnit" layoutX="794.0" layoutY="383.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="tfMetalMass" layoutX="794.0" layoutY="419.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Separator layoutX="-11.0" layoutY="183.0" prefHeight="4.0" prefWidth="988.0" />
+                        <Label layoutX="59.0" layoutY="387.0" text="Наименование" />
+                        <Label layoutX="58.0" layoutY="424.0" text="Количество" />
+                        <Label layoutX="413.0" layoutY="387.0" text="Наименование" />
+                        <Label layoutX="413.0" layoutY="423.0" text="Номер" />
+                        <Label layoutX="412.0" layoutY="448.0" prefHeight="37.0" prefWidth="64.0" text="Единица измерения" wrapText="true" />
+                        <Label layoutX="714.0" layoutY="387.0" text="Количество" />
+                        <Label layoutX="714.0" layoutY="424.0" text="Масса" />
+                        <Separator layoutX="372.0" layoutY="185.0" orientation="VERTICAL" prefHeight="329.0" prefWidth="5.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab3" text="Информация от передающей организации">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="293.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="48.0" text="Дата выпуска(постройки)*" />
+                        <Label layoutX="22.0" layoutY="78.0" prefHeight="71.0" prefWidth="212.0" text="Дата последнего капремонта, модернизации, реконструкции" wrapText="true" />
+                        <TextField fx:id="tfDocumentName" layoutX="317.0" layoutY="154.0" prefWidth="225.0" />
+                        <Label layoutX="22.0" layoutY="158.0" text="Наименование документа о вводе в эксплуатацию*" />
+                        <DatePicker fx:id="dpProductionDate" layoutX="317.0" layoutY="44.0" prefWidth="225.0" />
+                        <DatePicker fx:id="dpRepairDate" layoutX="317.0" layoutY="101.0" prefWidth="225.0" />
+                        <DatePicker fx:id="dpDocumentDate" layoutX="317.0" layoutY="249.0" prefWidth="225.0" />
+                        <Label layoutX="22.0" layoutY="246.0" prefHeight="30.0" prefWidth="188.0" text="Дата документа*" />
+                        <Label layoutX="22.0" layoutY="205.0" text="Номер документа*" />
+                        <TextField fx:id="tfDocumentNumber" layoutX="317.0" layoutY="201.0" prefWidth="225.0" />
+                        <TextField fx:id="tfOperationPeriod" layoutX="317.0" layoutY="302.0" prefWidth="225.0" />
+                        <Label layoutX="22.0" layoutY="306.0" text="Фактический срок эксплуатации*" />
+                        <TextField fx:id="tfDepreciationAmount" layoutX="317.0" layoutY="349.0" prefWidth="225.0" />
+                        <Label layoutX="22.0" layoutY="353.0" text="Сумма начисленной амортизации*" />
+                        <TextField fx:id="tfResidualCost" layoutX="317.0" layoutY="409.0" prefWidth="225.0" />
+                        <Label layoutX="22.0" layoutY="413.0" text="Остаточная стоимость*" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="14.0" layoutY="584.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="50.0" prefWidth="497.0" text="Сохранить" />
+      <Button layoutX="537.0" layoutY="584.0" mnemonicParsing="false" onAction="#btnCancelAction" prefHeight="50.0" prefWidth="444.0" text="Отмена" />
+   </children>
+</AnchorPane>

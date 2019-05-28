@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InventoryCardSubReports" pageWidth="600" pageHeight="850" whenNoDataType="AllSectionsNoDetail" columnWidth="600" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9c9c2e20-1e0b-41a2-b83a-3f910384515b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\УЧЁБА\\ДИПЛОМНАЯ РАБОТА\\Reports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CARD_ID" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="445">
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="10" width="600" height="25" uuid="ba4ea380-6fd5-4ac1-82df-26f9ee395185"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="47" width="600" height="25" uuid="ad339454-afaf-4026-81fa-7fd3f8111693"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="82" width="600" height="25" uuid="fc150bab-4b21-4564-a0e6-56bbb2e75f12"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport3.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="126" width="600" height="25" uuid="7ed26264-50e5-46e4-824e-123fc5800d63"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport4.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="166" width="600" height="25" uuid="efdeb5d9-9c8a-4961-8fb8-8d30dfe84da6"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport5.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="212" width="600" height="25" uuid="6a079044-ee75-4ad5-92cf-f941f2550b5c"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport6.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="254" width="600" height="25" uuid="c54dabd7-49bb-4c90-bfa6-7aa08c9b8043"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport7.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" x="0" y="297" width="600" height="25" uuid="2aed8090-3f5e-4b44-8634-43bcbadaf18e"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport8.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="40" width="100" height="1" uuid="5d1c336b-cde2-4f06-b154-bfcfb0c58cb2"/>
+			</break>
+			<break>
+				<reportElement x="0" y="118" width="100" height="1" uuid="4232fbe3-1bdf-453c-a22e-21f7226286b7"/>
+			</break>
+			<break>
+				<reportElement x="0" y="203" width="100" height="1" uuid="cf7adf83-b588-472d-96e6-04de772bed5f"/>
+			</break>
+			<break>
+				<reportElement x="0" y="286" width="100" height="1" uuid="701fb535-0a58-46fd-a460-52c91606afe3"/>
+			</break>
+			<subreport>
+				<reportElement x="0" y="352" width="600" height="30" uuid="9e03e699-04b7-4782-ae41-1e9077eecdb0"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport9.jasper"]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="336" width="100" height="1" uuid="26e71f08-3b9a-494b-b3cb-1504bb4f7ec2"/>
+			</break>
+			<break>
+				<reportElement x="0" y="392" width="100" height="1" uuid="80bd5092-6061-47aa-89cc-4eea2fac12b2"/>
+			</break>
+			<subreport>
+				<reportElement x="0" y="406" width="600" height="27" uuid="9e7ea6b7-f26a-4330-849e-e0874bc46a25"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CARD_ID">
+					<subreportParameterExpression><![CDATA[$P{CARD_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "InventoryCardReportSubreport10.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+</jasperReport>

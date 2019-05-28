@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="commons-beanutils-1.9.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/libs/commons-beanutils-1.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/libs/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/libs/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/libs/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/libs/groovy-all-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/libs/itext-pdfa-5.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/libs/itextpdf-5.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/libs/jasperreports-6.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/main/libs/times_new_roman_ext.jar!/" />
+    </SOURCES>
+  </library>
+</component>

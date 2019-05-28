@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1215.5" y="79.0">main.Controllers.Edit.EditRepairCostsController</node>
+    <node x="594.0" y="158.0">main.Controllers.ReportsController</node>
+    <node x="1026.5" y="79.0">main.Controllers.Edit.EditTransfersController</node>
+    <node x="690.25" y="336.0">main.Fixed_asset_accounting</node>
+    <node x="172.68489583333326" y="79.0">main.Controllers.Edit.EditMovementsController</node>
+    <node x="964.0" y="158.0">main.Controllers.CardInformationController</node>
+    <node x="747.5" y="257.0">main.MyDatabase</node>
+    <node x="601.5" y="257.0">main.Controllers.CardController</node>
+    <node x="1003.1249999999999" y="0.0">main.Controllers.Edit.EditController</node>
+    <node x="0.0" y="158.0">main.Controllers.DirectoryController</node>
+    <node x="169.9999999999999" y="158.0">main.Controllers.DepreciationObjectController</node>
+    <node x="392.9999999999999" y="159.2033898305084">main.Controllers.WriteOffObjectController</node>
+    <node x="755.0" y="158.0">main.Controllers.ReceptionObjectController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="main.Controllers.Edit.EditMovementsController" target="main.Controllers.Edit.EditController">
+      <point x="0.0" y="-14.5" />
+      <point x="264.68489583333326" y="59.0" />
+      <point x="1023.2916666666665" y="59.0" />
+      <point x="-40.33333333333337" y="14.5" />
+    </edge>
+    <edge source="main.Controllers.Edit.EditRepairCostsController" target="main.Controllers.Edit.EditController">
+      <point x="0.0" y="-14.5" />
+      <point x="1307.0" y="49.0" />
+      <point x="1103.9583333333333" y="49.0" />
+      <point x="40.33333333333337" y="14.5" />
+    </edge>
+    <edge source="main.Controllers.Edit.EditTransfersController" target="main.Controllers.Edit.EditController">
+      <point x="0.0" y="-14.5" />
+      <point x="1111.0" y="59.0" />
+      <point x="1063.625" y="59.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8309859154929577" x="699.0" y="121.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

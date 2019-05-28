@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="446.0" prefWidth="485.0" stylesheets="@../../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.Edit.EditMovementsController">
+   <children>
+      <ComboBox fx:id="cbCard" layoutX="250.0" layoutY="29.0" onAction="#cbCardAction" prefWidth="200.0" />
+      <Label layoutX="30.0" layoutY="33.0" text="Карточка*" />
+      <Button fx:id="btnSave" layoutX="30.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="40.0" prefWidth="180.0" text="Сохранить" />
+      <Button layoutX="270.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnCancelAction" prefHeight="40.0" prefWidth="180.0" text="Закрыть" />
+      <Label layoutX="30.0" layoutY="70.0" text="Наименование документа*" />
+      <TextField fx:id="tfDocumentName" layoutX="250.0" layoutY="66.0" prefWidth="200.0" />
+      <Label layoutX="30.0" layoutY="107.0" text="Дата документа*" />
+      <TextField fx:id="tfDocumentNumber" layoutX="250.0" layoutY="141.0" prefWidth="200.0" />
+      <Label layoutX="30.0" layoutY="145.0" text="Номер документа*" />
+      <Label layoutX="30.0" layoutY="181.0" text="Структурное подразделение 1*" />
+      <Label layoutX="30.0" layoutY="260.0" text="Остаточная стоимость*" />
+      <TextField fx:id="tfResidualCost" layoutX="250.0" layoutY="256.0" prefWidth="200.0" />
+      <Label layoutX="30.0" layoutY="336.0" text="Материально-ответственное лицо 2*" />
+      <ComboBox fx:id="cbNewMRP" layoutX="250.0" layoutY="332.0" prefWidth="200.0" />
+      <Label layoutX="30.0" layoutY="297.0" text="Материально-ответственное лицо 1*" />
+      <ComboBox fx:id="cbNewDepartment" layoutX="250.0" layoutY="216.0" prefWidth="200.0" />
+      <Label layoutX="30.0" layoutY="220.0" text="Структурное подразделение 2*" />
+      <DatePicker fx:id="dpDocumentDate" layoutX="250.0" layoutY="103.0" prefWidth="200.0" />
+      <TextField fx:id="tfOldDepartment" editable="false" layoutX="250.0" layoutY="177.0" prefWidth="200.0" />
+      <TextField fx:id="tfOldMRP" editable="false" layoutX="250.0" layoutY="293.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

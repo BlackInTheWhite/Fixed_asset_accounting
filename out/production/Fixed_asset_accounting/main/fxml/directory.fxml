@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="510.0" prefWidth="600.0" stylesheets="@../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.DirectoryController">
+   <children>
+      <TabPane fx:id="tpTest" layoutX="21.0" layoutY="73.0" prefHeight="369.0" prefWidth="552.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="CRP">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="411.0" prefWidth="520.0">
+                     <children>
+                        <TableView fx:id="twRP" layoutX="9.0" layoutY="14.0" prefHeight="200.0" prefWidth="532.0">
+                          <columns>
+                            <TableColumn prefWidth="107.0" text="Фамилия" />
+                            <TableColumn prefWidth="92.0" text="Имя" />
+                              <TableColumn prefWidth="98.0" text="Отчество" />
+                              <TableColumn prefWidth="140.0" text="Должность" />
+                              <TableColumn prefWidth="93.0" text="Номер" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="50.0" layoutY="230.0" mnemonicParsing="false" onAction="#btnAddRPAction" prefHeight="40.0" prefWidth="200.0" text="Добавить" />
+                        <Button layoutX="330.0" layoutY="230.0" mnemonicParsing="false" onAction="#btnEditRPAction" prefHeight="40.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="175.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnDelRPAction" prefHeight="40.0" prefWidth="200.0" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="изменения стоимости">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twType" layoutX="126.0" layoutY="14.0" prefHeight="200.0" prefWidth="300.0">
+                          <columns>
+                            <TableColumn prefWidth="298.0" text="Вид" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="50.0" layoutY="230.0" mnemonicParsing="false" onAction="#btnAddTypeAction" prefHeight="40.0" prefWidth="200.0" text="Добавить" />
+                        <Button layoutX="330.0" layoutY="230.0" mnemonicParsing="false" onAction="#btnEditTypeAction" prefHeight="40.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="175.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnDelTypeAction" prefHeight="40.0" prefWidth="200.0" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Группы амортизации">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twDepreciationGroup" layoutX="36.0" layoutY="14.0" prefHeight="200.0" prefWidth="506.0">
+                           <columns>
+                              <TableColumn prefWidth="135.0" text="Номер" />
+                              <TableColumn prefWidth="153.0" text="Наименование" />
+                              <TableColumn prefWidth="217.0" text="Характеристика" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="50.0" layoutY="230.0" mnemonicParsing="false" onAction="#btnAddDepreciationGroupAction" prefHeight="40.0" prefWidth="200.0" text="Добавить" />
+                        <Button layoutX="330.0" layoutY="230.0" mnemonicParsing="false" onAction="#btnEditDepreciationGroupAction" prefHeight="40.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="175.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnDelDepreciationGroupAction" prefHeight="40.0" prefWidth="200.0" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="17.0" layoutY="442.0" mnemonicParsing="false" onAction="#btnCloseAction" prefHeight="50.0" prefWidth="552.0" text="Закрыть" />
+      <Label layoutX="102.0" layoutY="32.0" text="Таблица" />
+      <ComboBox fx:id="cbTable" layoutX="208.0" layoutY="28.0" onAction="#cbTableAction" prefHeight="25.0" prefWidth="300.0" />
+   </children>
+</AnchorPane>

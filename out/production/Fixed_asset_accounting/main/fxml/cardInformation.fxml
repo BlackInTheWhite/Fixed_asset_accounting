@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="533.0" prefWidth="800.0" stylesheets="@../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.CardInformationController">
+   <children>
+      <Label layoutX="30.0" layoutY="19.0" text="Карточка" />
+      <ComboBox fx:id="cbCard" layoutX="120.0" layoutY="15.0" onAction="#cbCardAction" prefWidth="250.0" />
+      <ComboBox fx:id="cbTable" layoutX="120.0" layoutY="65.0" onAction="#cbTableAction" prefWidth="250.0" />
+      <Label layoutX="30.0" layoutY="69.0" text="Таблица" />
+      <Button layoutX="20.0" layoutY="465.0" mnemonicParsing="false" onAction="#btnCloseAction" prefHeight="50.0" prefWidth="739.0" text="Закрыть" />
+      <TabPane fx:id="tpTabPane" layoutX="22.0" layoutY="104.0" prefHeight="339.0" prefWidth="739.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twMainTable" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                          <columns>
+                            <TableColumn prefWidth="119.0" text="Номер карточки" />
+                            <TableColumn prefWidth="124.0" text="Организация" />
+                              <TableColumn prefWidth="124.0" text="Подразделение" />
+                              <TableColumn minWidth="0.0" prefWidth="131.0" text="Дата создания" />
+                              <TableColumn minWidth="0.0" prefWidth="221.0" text="Наименование объекта" />
+                              <TableColumn minWidth="0.0" prefWidth="79.0" text="ОКУД" />
+                              <TableColumn minWidth="0.0" prefWidth="100.0" text="ОКПО" />
+                              <TableColumn prefWidth="100.0" text="ОКОФ" />
+                              <TableColumn prefWidth="200.0" text="Группа амортизации" />
+                              <TableColumn prefWidth="200.0" text="Паспортный номер" />
+                              <TableColumn prefWidth="200.0" text="Серийный номер" />
+                              <TableColumn prefWidth="200.0" text="Инвентарный номер" />
+                              <TableColumn prefWidth="200.0" text="Дата поставки на учёт" />
+                              <TableColumn prefWidth="200.0" text="Дата списания с учета" />
+                              <TableColumn prefWidth="100.0" text="Номер счета" />
+                              <TableColumn prefWidth="200.0" text="Место нахождения" />
+                              <TableColumn prefWidth="150.0" text="Номер отдела" />
+                              <TableColumn prefWidth="150.0" text="Производитель" />
+                              <TableColumn prefWidth="300.0" text="Первоначальная стоимость" />
+                              <TableColumn prefWidth="300.0" text="Срок полезного использования" />
+                              <TableColumn prefWidth="300.0" text="Лицо ответственное за ведение" />
+                              <TableColumn prefWidth="300.0" text="Материально ответственное лицо" />
+                              <TableColumn prefWidth="200.0" text="Участники собственности" />
+                              <TableColumn prefWidth="200.0" text="Доля собственности" />
+                              <TableColumn prefWidth="300.0" text="Структурные элемента" />
+                              <TableColumn prefWidth="400.0" text="Характеристика главного объекта" />
+                              <TableColumn prefWidth="400.0" text="Характеристика приспособлений" />
+                              <TableColumn prefWidth="300.0" text="Примечание" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="270.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditMainTableAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="525.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnDelMainTableAction" prefHeight="50.0" prefWidth="200.0" text="Удалить" />
+                        <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnShowInfoMainTableAction" prefHeight="50.0" prefWidth="200.0" text="Просмотр" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twCostChanges" layoutX="10.0" layoutY="14.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="118.0" text="Номер карточки" />
+                              <TableColumn prefWidth="87.0" text="Операция" />
+                              <TableColumn prefWidth="173.0" text="Наименование документа" />
+                              <TableColumn prefWidth="112.0" text="Дата документа" />
+                              <TableColumn prefWidth="126.0" text="Номер документа" />
+                              <TableColumn prefWidth="103.0" text="Сумма затрат" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="270.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditCostChangesAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="525.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnDelCostChangesAction" prefHeight="50.0" prefWidth="200.0" text="Удалить" />
+                        <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAddCostChangesAction" prefHeight="50.0" prefWidth="200.0" text="Добавить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twDepreciation" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="150.0" text="Номер карточки" />
+                              <TableColumn prefWidth="70.0" text="Год" />
+                              <TableColumn prefWidth="100.0" text="Январь" />
+                              <TableColumn prefWidth="100.0" text="Февраль" />
+                              <TableColumn prefWidth="75.0" text="Март" />
+                              <TableColumn prefWidth="100.0" text="Апрель" />
+                              <TableColumn prefWidth="100.0" text="Май" />
+                              <TableColumn prefWidth="100.0" text="Июнь" />
+                              <TableColumn prefWidth="100.0" text="Июль" />
+                              <TableColumn prefWidth="100.0" text="Август" />
+                              <TableColumn prefWidth="100.0" text="Сентябрь" />
+                              <TableColumn prefWidth="100.0" text="Октябрь" />
+                              <TableColumn prefWidth="100.0" text="Ноябрь" />
+                              <TableColumn prefWidth="100.0" text="Декабрь" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="270.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditDepreciationAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="525.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnDelDepreciationAction" prefHeight="50.0" prefWidth="200.0" text="Удалить" />
+                        <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnShowInfoDepreciationAction" prefHeight="50.0" prefWidth="200.0" text="Просмотр" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="4">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twDevices" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="150.0" text="Номер карточки" />
+                              <TableColumn prefWidth="400.0" text="Наименование устройства, приспособления" />
+                              <TableColumn prefWidth="169.0" text="Количество" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="270.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditDevicaAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="525.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnDelDeviceAction" prefHeight="50.0" prefWidth="200.0" text="Удалить" />
+                        <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAddDeviceAction" prefHeight="50.0" prefWidth="200.0" text="Добавить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="5">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twMovements" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="150.0" text="Номер карточки" />
+                              <TableColumn prefWidth="170.0" text="Наименование документа" />
+                              <TableColumn prefWidth="100.0" text="Дата документа" />
+                              <TableColumn prefWidth="100.0" text="Номер документа" />
+                              <TableColumn prefWidth="75.0" text="Операция" />
+                              <TableColumn prefWidth="120.0" text="Подразделение 1" />
+                              <TableColumn prefWidth="120.0" text="Подразделение 2" />
+                              <TableColumn prefWidth="200.0" text="Остаточная стоимость" />
+                              <TableColumn prefWidth="400.0" text="Материально-ответственное лицо 1" />
+                              <TableColumn prefWidth="400.0" text="Материально-ответственное лицо 2" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="395.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditMovementsAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="117.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnShowInfoMovementsAction" prefHeight="50.0" prefWidth="200.0" text="Просмотр" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="6">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twNobleMetals" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="119.0" text="Номер карточки" />
+                              <TableColumn prefWidth="156.0" text="Наименование металла" />
+                              <TableColumn prefWidth="159.0" text="Номенклатурный номер" />
+                              <TableColumn prefWidth="131.0" text="Единица измерения" />
+                              <TableColumn prefWidth="78.0" text="Количество" />
+                              <TableColumn prefWidth="75.0" text="Масса" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="270.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditMetalsAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="525.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnDelMetalsAction" prefHeight="50.0" prefWidth="200.0" text="Удалить" />
+                        <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAddMetalsAction" prefHeight="50.0" prefWidth="200.0" text="Добавить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="7">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twRepairCost" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="116.0" text="Номер карточки" />
+                              <TableColumn prefWidth="97.0" text="Вид ремонта" />
+                              <TableColumn prefWidth="168.0" text="Наименование документа" />
+                              <TableColumn prefWidth="107.0" text="Дата документа" />
+                              <TableColumn prefWidth="116.0" text="Номер документа" />
+                              <TableColumn prefWidth="114.0" text="Сумма затрат" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="117.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditRepaitCostAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="395.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnDelRepairCostAction" prefHeight="50.0" prefWidth="200.0" text="Удалить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="8">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twRevaluation" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="150.0" text="Номер карточки" />
+                              <TableColumn prefWidth="150.0" text="Дата переоценки" />
+                              <TableColumn prefWidth="150.0" text="Коэффициент" />
+                              <TableColumn prefWidth="269.0" text="Восстановительная стоимость" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="270.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditRevaluationAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="525.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnDelRevaluationAction" prefHeight="50.0" prefWidth="200.0" text="Удалить" />
+                        <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAddRevaluationAction" prefHeight="50.0" prefWidth="200.0" text="Добавить" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="9">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twTransfer" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="150.0" text="Номер карточки" />
+                              <TableColumn prefWidth="200.0" text="Организация-получатель" />
+                              <TableColumn prefWidth="200.0" text="Контактная информация" />
+                              <TableColumn prefWidth="168.0" text="Основание документа" />
+                              <TableColumn prefWidth="170.0" text="наименование документа" />
+                              <TableColumn prefWidth="150.0" text="Номер документа" />
+                              <TableColumn prefWidth="150.0" text="Дата документа" />
+                              <TableColumn prefWidth="200.0" text="Стоимость приобретения" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="395.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditTransferAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="117.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnShowInfoTransferAction" prefHeight="50.0" prefWidth="200.0" text="Просмотр" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="10">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="twTransmisiion" layoutX="10.0" layoutY="15.0" prefHeight="200.0" prefWidth="720.0">
+                           <columns>
+                              <TableColumn prefWidth="150.0" text="Номер карточки" />
+                              <TableColumn prefWidth="144.0" text="Дата выпуска" />
+                              <TableColumn prefWidth="184.0" text="Дата последнего ремонта" />
+                              <TableColumn prefWidth="241.0" text="Наименование документа" />
+                              <TableColumn prefWidth="51.0" text="Номер документа" />
+                              <TableColumn prefWidth="150.0" text="Дата документа" />
+                              <TableColumn prefWidth="300.0" text="Фактический срок использования" />
+                              <TableColumn prefWidth="300.0" text="Сумма начисленной амортизации" />
+                              <TableColumn prefWidth="250.0" text="Остаточная стоимость" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="395.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnEditTransmissionAction" prefHeight="50.0" prefWidth="200.0" text="Редактировать" />
+                        <Button layoutX="117.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnShowInfoTransmisiion" prefHeight="50.0" prefWidth="200.0" text="Просмотр" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

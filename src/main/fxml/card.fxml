@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="676.0" prefWidth="750.0" stylesheets="@../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.CardController">
+   <children>
+      <Button layoutX="34.0" layoutY="606.0" mnemonicParsing="false" onAction="#btnExitAction" prefHeight="50.0" prefWidth="682.0" text="Выход" />
+      <TabPane layoutY="14.0" prefHeight="571.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="100.0" tabMaxWidth="230.0" tabMinHeight="100.0" tabMinWidth="230.0">
+        <tabs>
+          <Tab>
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#btnReceptionObject" prefHeight="50.0" prefWidth="300.0" text="Прием объекта" />
+                        <Button layoutX="30.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnTransferObjectAction" prefHeight="50.0" prefWidth="300.0" text="Передача объекта" />
+                        <Button layoutX="400.0" layoutY="35.0" mnemonicParsing="false" onAction="#btnWriteOffObjectAction" prefHeight="50.0" prefWidth="300.0" text="Списание объекта" />
+                        <Button layoutX="30.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnMovementsAction" prefHeight="50.0" prefWidth="300.0" text="Внутреннее перемещение объекта" />
+                        <Button layoutX="400.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnRepairAction" prefHeight="50.0" prefWidth="300.0" text="Обработка информации о ремонтах" />
+                        <Button layoutX="400.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnDepreciationAction" prefHeight="50.0" prefWidth="300.0" text="Обработка информации об амортизационных отчислениях" textAlignment="CENTER" wrapText="true" />
+                        <Button layoutX="30.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnCardInformationAction" prefHeight="50.0" prefWidth="300.0" text="Просмотр инвентарной карточки" />
+                        <Button layoutX="400.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnDirectoryAction" prefHeight="50.0" prefWidth="300.0" text="Справочники" />
+                        <Separator layoutY="270.0" prefHeight="3.0" prefWidth="756.0" />
+                        <Button layoutX="30.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnReportsAction" prefHeight="50.0" prefWidth="682.0" text="Формирование отчетов" />
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <Label prefHeight="77.0" prefWidth="146.0" text="Ведение инвентаризационной карточки" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </graphic>
+          </Tab>
+          <Tab>
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <graphic>
+                  <Label prefHeight="71.0" prefWidth="142.0" text="Расчет амортизационных отчислений" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </graphic>
+          </Tab>
+            <Tab>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="440.0" />
+               </content>
+               <graphic>
+                  <Label prefHeight="55.0" prefWidth="130.0" text="Учет проведения ремонтов" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

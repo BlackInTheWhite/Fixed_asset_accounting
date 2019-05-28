@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="387.0" prefWidth="492.0" stylesheets="@../css/myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.WriteOffObjectController">
+   <children>
+      <TextField fx:id="tfOldMRP" editable="false" layoutX="225.0" layoutY="234.0" prefWidth="225.0" />
+      <TextField fx:id="tfOldDepartment" editable="false" layoutX="225.0" layoutY="163.0" prefWidth="225.0" />
+      <DatePicker fx:id="dpDocumentDate" layoutX="225.0" layoutY="87.0" prefWidth="225.0" />
+      <Label layoutX="26.0" layoutY="238.0" text="Материально-ответственное лицо*" />
+      <TextField fx:id="tfResidualCost" layoutX="225.0" layoutY="199.0" prefWidth="225.0" />
+      <Label layoutX="26.0" layoutY="203.0" text="Остаточная стоимость*" />
+      <Label layoutX="26.0" layoutY="167.0" text="Структурное подразделение*" />
+      <Label layoutX="26.0" layoutY="131.0" text="Номер документа*" />
+      <TextField fx:id="tfDocumentNumber" layoutX="225.0" layoutY="127.0" prefWidth="225.0" />
+      <Label layoutX="26.0" layoutY="91.0" text="Дата документа*" />
+      <TextField fx:id="tfDocumentName" layoutX="225.0" layoutY="51.0" prefWidth="225.0" />
+      <Label layoutX="26.0" layoutY="55.0" text="Наименование документа*" />
+      <Button layoutX="258.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnCancelAction" prefHeight="40.0" prefWidth="202.0" text="Закрыть" />
+      <Button layoutX="25.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="40.0" prefWidth="202.0" text="Сохранить" />
+      <Label layoutX="26.0" layoutY="18.0" text="Карточка*" />
+      <ComboBox fx:id="cbCard" layoutX="225.0" layoutY="14.0" onAction="#cbCardAction" prefWidth="225.0" />
+      <Label layoutX="26.0" layoutY="276.0" text="Дата списания с учета*" />
+      <DatePicker fx:id="dpWriteoffDate" layoutX="225.0" layoutY="272.0" prefWidth="225.0" />
+   </children>
+</AnchorPane>
